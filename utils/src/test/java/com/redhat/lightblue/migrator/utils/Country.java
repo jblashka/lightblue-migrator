@@ -2,7 +2,7 @@ package com.redhat.lightblue.migrator.utils;
 
 import java.util.Objects;
 
-public class Country {
+public class Country implements IdExtractable {
 
     private String name, iso2Code, iso3Code;
     private Long id;
@@ -10,6 +10,8 @@ public class Country {
     public long getId() {
         return id;
     }
+
+    public Long extractId() { return getId();}
 
     public Country(String iso2Code) {
         this(null, iso2Code);

@@ -9,8 +9,8 @@ package com.redhat.lightblue.migrator.utils;
  */
 public interface EntityIdStore {
 
-    public void push(Long id);
+    public void push(Object id);
 
-    public Long pop();
+    public Object pop();
 
 }
